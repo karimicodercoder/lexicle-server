@@ -9,8 +9,7 @@ const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
 })
 const app = express()
-const PORT = 3001
-
+const PORT = process.env.PORT || 3001
 const WORDS = ["apple", "grape", "mango", "peach", "melon", "berry", "olive", "plumb".slice(0,5)]
 
 app.use(cors())
