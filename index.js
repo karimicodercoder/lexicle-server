@@ -6,13 +6,8 @@ import "dotenv/config"
 const { Pool } = pg
 
 const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "lexicle",
-  password: process.env.DB_PASSWORD,
-  port: 5432,
+  connectionString: process.env.DATABASE_URL,
 })
-
 const app = express()
 const PORT = 3001
 
